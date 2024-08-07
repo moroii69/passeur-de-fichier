@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>passeur de fichiers</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <!-- Font Awesome for eye icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <div class="container d-flex align-items-center justify-content-center vh-100">
+    <div class="text-center">
+      <h1><span>passeur</span> de fichiers.</h1>
+      <div class="mb-3">
+        <label for="file-upload" class="btn btn-dark btn-file">
+          Choose file
+          <input type="file" id="file-upload" class="d-none">
+        </label>
+        <span id="file-info" class="d-block mt-2 text-success"></span>
+      </div>
+      <div class="mb-3 position-relative">
+        <input type="password" id="password" class="form-control" placeholder="Set open password">
+        <span id="togglePassword" class="toggle-password">
+          <i class="fas fa-eye"></i>
+        </span>
+      </div>
+      <div class="mb-3">
+        <textarea id="message" class="form-control" placeholder="Message" rows="4"></textarea>
+      </div>
+      <div class="mb-3">
+        <button id="build-btn" class="btn btn-dark">build embedded HTML file</button>
+      </div>
+      <div id="progress-container" class="d-none">
+        <div class="progress">
+          <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <span id="progress-text" class="d-block mt-2 text-info"></span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>
